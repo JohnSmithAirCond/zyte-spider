@@ -11,12 +11,13 @@ from ..params import (
     MaxRequestsParam,
     SeedUrlParam,
     UrlParam,
+    UrlsParam,
 )
 
 # Higher priority than command-line-defined settings (40).
 ARG_SETTING_PRIORITY: int = 50
 
-_INPUT_FIELDS = ("url", "seed_url")
+_INPUT_FIELDS = ("url", "urls", "seed_url")
 
 
 class BaseSpiderParams(
@@ -24,6 +25,7 @@ class BaseSpiderParams(
     MaxRequestsParam,
     GeolocationParam,
     SeedUrlParam,
+    UrlsParam,
     UrlParam,
     BaseModel,
 ):
